@@ -1,0 +1,13 @@
+<p>
+  <strong><%= @device.hostname %></strong>
+</p>
+<p>
+  <% if @device.configs.empty? %>
+    <i>Конфигурации появятся позднее</i>
+  <% else %>
+    <% @device.configs.each do |config| %>
+      <ul><li><%= link_to "#{config.created_at}", config_path(config) %> |
+      <%= link_to 'Удалить',  config, method: :delete, data: { confirm: 'Вы уверены?' } %></li></ul>
+    <% end %>
+  <% end %>
+</p>

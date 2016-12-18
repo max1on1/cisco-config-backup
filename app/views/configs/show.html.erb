@@ -1,0 +1,4 @@
+<h1>Config of <%= @config.device.hostname %> created at: <%= @config.created_at %> </h1>
+<p><%= raw(@config.config.gsub(/\n/, '<br/>'.html_safe)) %></p>
+
+

@@ -1,0 +1,23 @@
+<div>
+  <%= form_for(@device) do |f| %>
+    <div class="field">
+      <%= f.label :hostname %>
+      <%= f.text_field :hostname %>
+    </div>
+
+    <div class="field">
+    <%= f.label :ip %>
+    <%= f.text_field :ip %>
+    </div>
+
+  <div class="field">
+      <%= f.label :connection_profile_id, "Список профилей подключения" %>
+      <%= f.collection_select :connection_profile_id, ConnectionProfile.all, :id, :name, {}%>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+  <% end %>
+</div>

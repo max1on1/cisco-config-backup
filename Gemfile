@@ -26,13 +26,12 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pry-rails'
-gem 'net-ssh'
+gem 'net-ssh', '~> 4.0.0.beta3'
 gem 'net-ssh-telnet'
-
-gem 'therubyracer'
-
-gem 'twitter-bootstrap-rails'
-
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
+gem 'sprockets', '3.6.3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

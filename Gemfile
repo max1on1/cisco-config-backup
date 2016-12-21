@@ -32,6 +32,7 @@ gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'sprockets', '3.6.3'
+gem 'diffy'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

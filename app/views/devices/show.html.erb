@@ -5,9 +5,20 @@
   <% if @device.configs.empty? %>
     <i>Конфигурации появятся позднее</i>
   <% else %>
-    <% @device.configs.each do |config| %>
-      <ul><li><%= link_to "#{config.created_at}", config_path(config) %> |
-      <%= link_to 'Удалить',  config, method: :delete, data: { confirm: 'Вы уверены?' } %></li></ul>
-    <% end %>
+  	<%= form_tag  device_difference_path(@device), method: :get do %>	   
+	    <% i = 0 %>
+	    <% @device.configs.each do |config| %>
+	      <ul><li>
+	      |
+	      <%= check_box_tag "conf_ids[]", config.id %>
+	      <%= link_to "#{config.created_at}", config_path(config) %> |
+	      <%= link_to 'Удалить',  config, method: :delete, data: { confirm: 'Вы уверены?' } %></li></ul> 
+	      
+	    <% end %>
+	    <%= submit_tag 'сравнить'%>
+	<% end %>
   <% end %>
 </p>
+
+
+

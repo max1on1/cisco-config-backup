@@ -1,23 +1,37 @@
-<div>
-  <%= form_for(@device) do |f| %>
-    <div class="field">
-      <%= f.label :hostname %>
-      <%= f.text_field :hostname %>
-    </div>
+<div class="form">
+  <div class="row">
+    <%= form_for(@device) do |f| %>
+      <div class="col-md-2">
+        <%= f.label :hostname %>
+      </div>
+      <div class="col-md-2">
+        <%= f.text_field :hostname %>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-2">
+      <%= f.label :ip %>
+      </div>
+      <div class="col-md-2">
+      <%= f.text_field :ip %>
+      </div>
+  </div>
 
-    <div class="field">
-    <%= f.label :ip %>
-    <%= f.text_field :ip %>
+  <div class="row">
+    <div class="col-md-2">
+      <%= f.label :connection_profile_id, "List of profies" %>
     </div>
-
-  <div class="field">
-      <%= f.label :connection_profile_id, "Список профилей подключения" %>
+    <div class="col-md-2">  
       <%= f.collection_select :connection_profile_id, ConnectionProfile.all, :id, :name, {}%>
     </div>
+  </div>  
 
-    <div class="actions">
-      <%= f.submit %>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="action">
+          <%= f.submit 'Create', class: "btn btn-default" %>
+        </div>
+      </div> 
     </div>
-
   <% end %>
 </div>

@@ -1,3 +1,10 @@
-<% @connection_profiles.each do |profile| %>
-	<p><%= profile.name %></p>
-<% end %>
+<h2>
+	<strong>List of connection profiles</strong>
+</h2>	
+<p>
+	<% @connection_profiles.each do |profile| %>
+		<p><%= link_to "#{profile.name}", connection_profile_path(profile) %></p>
+	<% end %>
+
+<%= link_to 'Add connection profile',  new_connection_profile_path %>
+</p>

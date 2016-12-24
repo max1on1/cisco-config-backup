@@ -1,0 +1,15 @@
+<h2>
+	<strong>
+		Profile name: <%= @connection_profile.name %>
+	</strong>
+</h2>
+<p>
+	Username for login:<i> <%= @connection_profile.username %></i>	
+</p>
+<p>
+	Password for login:<i> <%= @connection_profile.password %></i>
+</p>
+
+<%= link_to 'Change', edit_connection_profile_path(@connection_profile) %>
+
+

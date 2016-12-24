@@ -1,0 +1,38 @@
+<h2>
+	<strong>
+		Create connection profile
+	</strong>
+</h2>
+<%= form_for @connection_profile do |f| %>
+	<div class="row">
+		<div class="col-md-1">
+			<%= f.label :name %>
+		</div>
+		<div class="col-md-1">
+			<%= f.text_field :name %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-1">
+			<%= f.label :username %>
+		</div>
+		<div class="col-md-1">
+			<%= f.text_field :username %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-1">
+			<%= f.label :password %>
+		</div>
+		<div class="col-md-1">
+			<%= f.text_field :password %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-1">
+			<div class="action">
+				<%= f.submit 'Create', class: "btn btn-default" %>
+			</div>
+		</div> 
+	</div>
+<% end %>

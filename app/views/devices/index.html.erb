@@ -1,3 +1,14 @@
-<% @devices.each do |device| %>
-  <%= link_to "#{device.hostname}", device_path(device) %>
-<% end %>
+<div>
+	<div>
+		<h3>
+			<b>List of all devices</b>
+		</h3>
+	</div>
+	<% @devices.each do |device| %>
+	  <%= link_to "#{device.hostname}", device_path(device) %> <br/>
+	<% end %>
+	<br/>
+	<strong>
+		<%= link_to "Add device", new_device_path %>
+	</strong>
+</div>
